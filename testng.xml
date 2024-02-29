@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!--suite name="Suite" thread-count ="10"  parallel="tests"-->
+<listeners>
+	<listener class-name="setup.ExtentReportManager"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+  <parameter name="os" value="windows" />
+  <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testcases.TC_01_Hoverelement"/>
+      <class name="testcases.TC_02_Upcomingbikes"/>
+      <class name="testcases.TC_03_Usedcars"/>
+      <class name="testcases.TC_04_Signin"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
